@@ -1,12 +1,10 @@
-'use strict';
-
 const Menu = (props) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <a className="navbar-brand" href="#">{props.title}{' '}
         <span style={{fontSize:'60%'}}>v{props.version}</span>
       </a>
-
+      
       <ul className="navbar-nav mr-auto">
         {props.items.map(({name, url}) => (
           <li key={name} className="nav-item">
@@ -24,7 +22,7 @@ const Menu = (props) => {
 
 Menu.propTypes = {
   handleSearch: PropTypes.func,
-
+  
   title: PropTypes.string,
   version: (props, propName, componentName) => {
     if (!/^[0-9]{1,2}\.[0-9]{1,2}$/.test(props[propName])) {
