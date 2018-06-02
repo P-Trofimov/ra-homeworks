@@ -8,8 +8,7 @@ class App extends React.Component {
         {
           first_name: 'Alexey',
           last_name: 'Korzhov',
-          url: 'https://vk.com/anonimizer_me',
-          birthday: 'efq'
+          url: 'https://vk.com/anonimizer_me'
         },
         {
           first_name: 'Pavel',
