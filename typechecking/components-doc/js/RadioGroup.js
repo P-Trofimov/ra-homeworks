@@ -8,11 +8,19 @@ const RadioGroup = props => {
         {props.list.map((item, i) => (
           <div key={`${props.name}_${i}`} className="form-check form-check-inline">
             <input className="form-check-input" type="radio" name={props.name} onChange={props.onChange}
-                   value={item} checked={item == props.value} id={`radio_${props.name}_${i}`}/>
+                   value={item} checked={item === props.value} id={`radio_${props.name}_${i}`}/>
             <label className="form-check-label" htmlFor={`radio_${props.name}_${i}`}>{item}</label>
           </div>
         ))}
       </div>
     </div>
   )
+};
+
+RadioGroup.propTypes = {
+  label: PropTypes.string,
+  list: PropTypes.arrayOf(PropTypes.string),
+  name: PropTypes.string,
+  onChange: PropTypes.func,
+  value: PropTypes.oneOf(['муж', 'жен'])
 };
